@@ -1,0 +1,296 @@
+.new_spot {
+  text-align: center;
+}
+
+.post_form {
+    text-align: center;
+    margin: 0px 0px 0px 510px
+   
+}
+
+.field{
+    text-align: center;
+}
+
+.actions{
+    text-align: center;
+}
+
+.map{
+  text-align: center;
+}
+
+.form-group {
+    overflow: hidden;
+    width: 20%;
+    margin: 2em auto;
+    text-align: center;
+  }
+  .form-group select {
+    width: 100%;
+    padding-right: 1em;
+    cursor: pointer;
+    text-indent: 0.01px;
+    text-overflow: ellipsis;
+    border: none;
+    outline: none;
+    background: transparent;
+    background-image: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .form-group select::-ms-expand {
+      display: none;
+  }
+  .form-group {
+    position: relative;
+    border-radius: 2px;
+    border: 2px solid #000;
+    border-radius: 50px;
+    background: #ffffff;
+  }
+  .form-group::before {
+    position: absolute;
+    top: 0.8em;
+    right: 0.8em;
+    width: 0;
+    height: 0;
+    padding: 0;
+    content: '';
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #000;
+    pointer-events: none;
+  }
+  .form-group select {
+    padding: 8px 38px 8px 8px;
+    color: black;
+  }
+
+  
+
+  .loopSlide {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100vw;
+    overflow: hidden;
+
+    ul {
+        padding: 0;
+        width: 100vw;
+        display: flex;
+        flex-shrink: 0;
+
+        &:first-child {
+            animation: slide1 60s -30s linear infinite;
+        }
+
+        &:last-child {
+            animation: slide2 60s linear infinite;
+        }
+
+        li {
+            display: inline-block;
+            width: 100%;
+            min-width: 150px;
+            margin-right: 20px;
+            list-style: none;
+            text-align: center;
+
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+
+        }
+
+    }
+    
+   &:hover {
+        ul {
+            animation-play-state: paused;
+        }
+    }
+}
+
+@keyframes slide1 {
+    0% {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes slide2 {
+    0% {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-200%);
+    }
+}
+
+.Slide {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100vw;
+  overflow: hidden;
+
+  ul {
+      padding: 0;
+      width: 100vw;
+      display: flex;
+      flex-shrink: 0;
+
+      &:first-child {
+          animation: slide1 60s -30s linear infinite;
+      }
+
+      &:last-child {
+          animation: slide2 60s linear infinite;
+      }
+
+      li {
+          display: inline-block;
+          width: 100%;
+          min-width: 150px;
+          margin-right: 20px;
+          list-style: none;
+          text-align: center;
+
+          img {
+              display: block;
+              width: 100%;
+              height: auto;
+          }
+
+      }
+
+  }
+  
+ &:hover {
+      ul {
+          animation-play-state: paused;
+      }
+  }
+}
+
+@keyframes slide1 {
+  0% {
+      transform: translateX(100%);
+  }
+
+  to {
+      transform: translateX(-100%);
+  }
+}
+
+@keyframes slide2 {
+  0% {
+      transform: translateX(0);
+  }
+
+  to {
+      transform: translateX(-200%);
+  }
+}
+
+.Lide {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100vw;
+  overflow: hidden;
+
+  ul {
+      padding: 0;
+      width: 100vw;
+      display: flex;
+      flex-shrink: 0;
+
+      &:first-child {
+          animation: slide1 60s -30s linear infinite;
+      }
+
+      &:last-child {
+          animation: slide2 60s linear infinite;
+      }
+
+      li {
+          display: inline-block;
+          width: 100%;
+          min-width: 150px;
+          margin-right: 20px;
+          list-style: none;
+          text-align: center;
+
+          img {
+              display: block;
+              width: 100%;
+              height: auto;
+          }
+
+      }
+
+  }
+  
+ &:hover {
+      ul {
+          animation-play-state: paused;
+      }
+  }
+}
+
+@keyframes slide1 {
+  0% {
+      transform: translateX(100%);
+  }
+
+  to {
+      transform: translateX(-100%);
+  }
+}
+
+@keyframes slide2 {
+  0% {
+      transform: translateX(0);
+  }
+
+  to {
+      transform: translateX(-200%);
+  }
+}
+
+.niji1{
+    background-image: url(https://d1f5hsy4d47upe.cloudfront.net/2c/2cdebf849c0168078ba57c1c07213a3f_t.jpeg);
+   padding-top: 20px;
+}
+
+.smile1{
+    background-image: url(https://d1f5hsy4d47upe.cloudfront.net/2c/2cdebf849c0168078ba57c1c07213a3f_t.jpeg);
+}
+
+.niji2{
+    background-image: url(https://d1f5hsy4d47upe.cloudfront.net/2c/2cdebf849c0168078ba57c1c07213a3f_t.jpeg);
+   padding-top: 20px;
+}
+
+.smile2{
+    background-image: url(https://d1f5hsy4d47upe.cloudfront.net/2c/2cdebf849c0168078ba57c1c07213a3f_t.jpeg);
+}
+
+.niji3{
+    background-image: url(https://d1f5hsy4d47upe.cloudfront.net/2c/2cdebf849c0168078ba57c1c07213a3f_t.jpeg);
+   padding-top: 20px;
+}
+
+.smile3{
+    background-image: url(https://d1f5hsy4d47upe.cloudfront.net/2c/2cdebf849c0168078ba57c1c07213a3f_t.jpeg);
+}

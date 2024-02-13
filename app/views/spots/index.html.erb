@@ -1,0 +1,401 @@
+<div id="mana" class="first-view">
+        <div class="img-01" alt="">
+        </div>
+        <div class="img-02" alt="">
+        </div>
+        <div class="img-03" alt="">
+        </div>
+        <link href='https://fonts.googleapis.com/css?family=Noto+Serif+JP' rel="stylesheet">
+       
+<body>
+<div class="anime-box">
+	<div class="OneTextAnime">
+		<span><p class="indent1">世</span>
+      <span>界</span>
+		<span>中</span>
+		<span>の</span>
+		<span>人</span>
+		<span>々</span>
+		<span>に</span>
+		<span><br>素</span>
+		<span>敵</span>
+		<span>な</span>
+		<span>旅</span>
+		<span>を</span>
+		<span><br>お</span>
+      <span>届</span>
+      <span>け</span>
+      <span>し</span>
+      <span>よ</span>
+      <span>う</p></span>
+      
+     
+	</div>
+</div>
+<div id="container">
+  <div class="ripples">
+    <div></div>
+  </div>
+</div>
+<p><a href="https://1-notes.com/css-ripples-animation/" target="_blank" rel="noopener"></a></p>
+</body>
+
+
+</div> 
+
+<div class="content_1">
+    <h1 class="logo_test">
+    Find the style of travel that suits you and where you want to go</h1>
+    </div>
+</div>
+ 
+<div class="content_2">
+  <h1 class="logo_test2">
+  recop</h1>
+
+
+
+      
+     
+
+
+ 
+
+
+  <div class="content_3">
+  <%= form_tag({controller:"spots",action:"index"}, method: :get) do %>
+   <%= text_field_tag :search %>
+   <%= submit_tag '検索する'  %>
+  <% end %>
+  </div>
+</div>
+
+<%= form_tag spots_path, method: :get, class: 'boards__searchForm' do %>
+   
+<div class="enjoy">
+   
+<div class="travel">
+   <% @hotel.each do |t| %>
+      <%= image_tag t.image_url, size: "250x200" if t.image? %><br>
+      <% t.tags.each do |tag| %>
+         <%= tag.name %>
+         <% end %><br>
+      <%= t.link %><br>
+      <%= t.title %><br>
+      <%= t.address %><br>
+      <%= t.about %><br>
+      
+      <div class="block1">
+      <div>
+         <h5>総合評価：
+         <span class="star-rating">
+            <span class="star-rating-front" style="width: <%= getPercent(t.overall) %>%;">★★★★★</span>
+            <span class="star-rating-back">★★★★★</span>
+         </span><br>
+         </h5>
+      </div>
+      
+
+      <div>
+         <h5>立地：
+         <span class="star-rating">
+            <span class="star-rating-front" style="width: <%= getPercent(t.level) %>%;">★★★★★</span>
+            <span class="star-rating-back">★★★★★</span>
+         </span> 
+         </h5>
+      </div>
+
+      <div>
+         <h5>清潔感：
+         <span class="star-rating">
+            <span class="star-rating-front" style="width: <%= getPercent(t.q) %>%;">★★★★★</span>
+            <span class="star-rating-back">★★★★★</span>
+         </span> 
+         </h5>
+      </div>
+
+      <div>
+         <h5>サービス：
+         <span class="star-rating">
+            <span class="star-rating-front" style="width: <%= getPercent(t.w) %>%;">★★★★★</span>
+            <span class="star-rating-back">★★★★★</span>
+         </span> 
+         </h5>
+      </div>
+
+      <div>
+         <h5>価格：
+         <span class="star-rating">
+            <span class="star-rating-front" style="width: <%= getPercent(t.e) %>%;">★★★★★</span>
+            <span class="star-rating-back">★★★★★</span>
+         </span>
+         </h5>
+      </div>
+   </div> 
+     
+      
+   
+      <br><%= link_to "詳細へ", spot_path(t.id) %>
+      <% if user_signed_in? && current_user.id == t.user_id %>
+      <%= link_to "編集する", edit_spot_path(t.id) %>
+      <%= link_to "削除する", spot_path(t.id), method: :delete %>
+      <% end %>
+      
+   <% end %>
+</div>    
+  
+
+   
+
+  
+
+
+
+
+<div class="travel2">
+   <% @sightseeing.each do |t| %>
+      <%= image_tag t.image_url, size: "250x200" if t.image? %><br>
+      <% t.tags.each do |tag| %>
+         <%= tag.name %>
+         <% end %><br>
+      <%= t.link %><br>
+      <%= t.title %><br>
+      <%= t.address %><br>
+      <%= t.about %><br>
+      
+      
+      <div class="block2">
+      <div>
+         <h5>総合評価：
+         <span class="star-rating">
+            <span class="star-rating-front" style="width: <%= getPercent(t.h) %>%;">★★★★★</span>
+            <span class="star-rating-back">★★★★★</span>
+         </span> 
+         </h5>
+      </div>
+      
+      <div>
+         <h5>景色：
+         <span class="star-rating">
+            <span class="star-rating-front" style="width: <%= getPercent(t.r) %>%;">★★★★★</span>
+            <span class="star-rating-back">★★★★★</span>
+         </span> 
+         </h5>
+      </div>
+
+      <div>
+         <h5>立地：
+         <span class="star-rating">
+            <span class="star-rating-front" style="width: <%= getPercent(t.t) %>%;">★★★★★</span>
+            <span class="star-rating-back">★★★★★</span>
+         </span> 
+         </h5>
+      </div>
+
+      <div>
+         <h5>価格：
+         <span class="star-rating">
+            <span class="star-rating-front" style="width: <%= getPercent(t.y) %>%;">★★★★★</span>
+            <span class="star-rating-back">★★★★★</span>
+         </span> 
+         </h5>
+      </div>
+
+      <div>
+         <h5>ファミリー向け：
+         <span class="star-rating">
+            <span class="star-rating-front" style="width: <%= getPercent(t.u) %>%;">★★★★★</span>
+            <span class="star-rating-back">★★★★★</span>
+         </span> 
+         </h5>
+      </div>
+
+      <div>
+         <h5>カップル向け：
+         <span class="star-rating">
+            <span class="star-rating-front" style="width: <%= getPercent(t.i) %>%;">★★★★★</span>
+            <span class="star-rating-back">★★★★★</span>
+         </span> 
+         </h5>
+      </div>
+
+      <div>
+         <h5>一人旅向け：
+         <span class="star-rating">
+            <span class="star-rating-front" style="width: <%= getPercent(t.o) %>%;">★★★★★</span>
+            <span class="star-rating-back">★★★★★</span>
+         </span> 
+         </h5>
+      </div>
+
+      <div>
+         <h5>穴場スポット：
+         <span class="star-rating">
+            <span class="star-rating-front" style="width: <%= getPercent(t.p) %>%;">★★★★★</span>
+            <span class="star-rating-back">★★★★★</span>
+         </span> 
+         </h5>
+      </div>
+
+      <div>
+         <h5>雨の日にもおすすめ：
+         <span class="star-rating">
+            <span class="star-rating-front" style="width: <%= getPercent(t.a) %>%;">★★★★★</span>
+            <span class="star-rating-back">★★★★★</span>
+         </span> 
+         </h5>
+      </div>
+</div>
+      <br><%= link_to "詳細へ", spot_path(t.id) %>
+      <% if user_signed_in? && current_user.id == t.user_id %>
+      <%= link_to "編集する", edit_spot_path(t.id) %>
+      <%= link_to "削除する", spot_path(t.id), method: :delete %>
+      <% end %> 
+      
+   <% end %>
+   </div>
+
+
+
+   
+
+
+
+<div class="travel3">
+   <% @restaurant.each do |t| %>
+      <%= image_tag t.image_url, size: "250x200" if t.image? %><br>
+      <% t.tags.each do |tag| %>
+         <%= tag.name %>
+         <% end %><br>
+      <%= t.link %><br>
+      <%= t.title %><br>
+      <%= t.address %><br>
+      <%= t.about %><br>
+      
+      
+<div class="block3">
+<div>
+      <h5>総合評価：
+      <span class="star-rating">
+         <span class="star-rating-front" style="width: <%= getPercent(t.j) %>%;">★★★★★</span>
+         <span class="star-rating-back">★★★★★</span>
+      </span> 
+      </h5>
+      </div>
+      <div>
+      <h5>食事：
+      <span class="star-rating">
+         <span class="star-rating-front" style="width: <%= getPercent(t.s) %>%;">★★★★★</span>
+         <span class="star-rating-back">★★★★★</span>
+      </span> 
+      </h5>
+      </div>
+
+      <div>
+      <h5>接客・サービス：
+      <span class="star-rating">
+         <span class="star-rating-front" style="width: <%= getPercent(t.d) %>%;">★★★★★</span>
+         <span class="star-rating-back">★★★★★</span>
+      </span> 
+      </h5>
+      </div>
+
+      <div>
+      <h5>価格：
+      <span class="star-rating">
+         <span class="star-rating-front" style="width: <%= getPercent(t.f) %>%;">★★★★★</span>
+         <span class="star-rating-back">★★★★★</span>
+      </span> 
+      </h5>
+      </div>
+
+      <div>
+      <h5>雰囲気：
+      <span class="star-rating">
+         <span class="star-rating-front" style="width: <%= getPercent(t.g) %>%;">★★★★★</span>
+         <span class="star-rating-back">★★★★★</span>
+      </span> 
+      </h5>
+      </div>
+</div>
+      
+      <br>
+      <%= link_to "詳細へ", spot_path(t.id) %>
+      <% if user_signed_in? && current_user.id == t.user_id %>
+       <%= link_to "編集する", edit_spot_path(t.id) %>
+       <%= link_to "削除する", spot_path(t.id), method: :delete %>
+      <% end %> 
+      
+   <% end %>
+   
+
+
+<% end %>
+</div>
+
+
+<div id="map"></div>
+<style>
+#map {
+   height: 450px;
+   width: 600px;
+   margin: 20px 20px 50px 300px;
+}
+</style>
+
+<!-- js部分 -->
+<script>
+    function initMap() {
+
+      //初期表示位置
+      let latlng = new google.maps.LatLng(38.60, 139.5);
+      //デザイン
+      let styles = [
+           {
+            stylers: [
+             { "saturation": 0 },
+             { "lightness": 0 }
+            ]
+           }
+          ];
+
+      let map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 5.5,
+          styles: styles,
+          center: latlng
+      });
+      let transitLayer = new google.maps.TransitLayer();
+      transitLayer.setMap(map);
+
+      
+//複数マーカー ここから
+      <% @spots.each do |spot|%>
+        ( function() { 
+          let markerLatLng = { lat: <%= spot.lat %>, lng: <%= spot.lng %> }; // 緯度経度のデータ作成
+          let marker = new google.maps.Marker({ 
+            position: markerLatLng, 
+            map: map 
+          });
+//マーカーをクリックしたとき、詳細情報を表示
+          let infowindow = new google.maps.InfoWindow({
+            position: markerLatLng,
+            content: "<a href='<%= spot_url(spot.id) %>' target='_blank'><%= spot.body %></a>"
+          }); //ここで詳細ページへのリンクを表示させる
+          marker.addListener('click', function() {
+            infowindow.open(map, marker);
+          });
+
+       })();
+      <% end %>
+      //複数マーカー ここまで  
+  }
+</script>
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['AIzaSyAyAyKFLgMNdAfXf_ogG3BCJmcmtO5xsyA'] %>&callback=initMap" async defer></script>　 
+<%= paginate @spots %>
+</div>
+
+
+

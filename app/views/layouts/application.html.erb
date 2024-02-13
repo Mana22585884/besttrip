@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kmana</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <script src="https://kit.fontawesome.com/cfc67f40f1.js" crossorigin="anonymous"></script>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+   
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <header>
+  <h1></h1>
+  <div class="header-list">
+   <ul>
+    <% if user_signed_in? %>
+     <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
+     <li><%= link_to "Hotel", "/spots/new/hotel" %></li>
+     <li><%= link_to "Sightseeing", "/spots/new/sightseeing" %></li>
+     <li><%= link_to "Restaurant", "/spots/new/restaurant" %></li>
+     <li><%= link_to "Home", "/spots#index" %></li>
+     <li><%= link_to "My page",user_path(current_user.id) %></li>
+     
+    <% else %>
+    <li><%= link_to 'Log in', new_user_registration_path %></li>
+    <% end %>
+
+    
+   </ul>
+  </div>
+ </header>
+ <main>
+  <%= yield %>
+ </main>
+  </body>
+  <html>
+
+  

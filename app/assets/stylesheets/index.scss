@@ -1,0 +1,319 @@
+.anime-box .OneTextAnime{
+	display: flex;
+	overflow: hidden;
+}
+
+.anime-box .OneTextAnime span{
+	opacity: 0;
+	animation: onetxtanime 2s forwards;
+}
+
+.anime-box .OneTextAnime span:nth-child(1){animation-delay: 0.5s}
+.anime-box .OneTextAnime span:nth-child(2){animation-delay: 1.0s}
+.anime-box .OneTextAnime span:nth-child(3){animation-delay: 1.5s}
+.anime-box .OneTextAnime span:nth-child(4){animation-delay: 2.0s}
+.anime-box .OneTextAnime span:nth-child(5){animation-delay: 2.5s}
+.anime-box .OneTextAnime span:nth-child(6){animation-delay: 3.0s}
+.anime-box .OneTextAnime span:nth-child(7){animation-delay: 3.5s}
+.anime-box .OneTextAnime span:nth-child(8){animation-delay: 4.0s}
+.anime-box .OneTextAnime span:nth-child(9){animation-delay: 4.5s}
+.anime-box .OneTextAnime span:nth-child(10){animation-delay: 5.0s}
+.anime-box .OneTextAnime span:nth-child(11){animation-delay: 5.5s}
+.anime-box .OneTextAnime span:nth-child(12){animation-delay: 6.0s}
+.anime-box .OneTextAnime span:nth-child(13){animation-delay: 6.5s}
+.anime-box .OneTextAnime span:nth-child(14){animation-delay: 7.0s}
+.anime-box .OneTextAnime span:nth-child(15){animation-delay: 7.5s}
+.anime-box .OneTextAnime span:nth-child(16){animation-delay: 8.0s}
+.anime-box .OneTextAnime span:nth-child(17){animation-delay: 8.5s}
+.anime-box .OneTextAnime span:nth-child(18){animation-delay: 9.0s}
+
+@keyframes onetxtanime{
+	from { opacity: 0 }
+	to { opacity: 1 }
+}
+
+.tag1{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.travel{
+  display: flex;
+  flex-wrap: wrap;
+  background-image:url(https://beiz.jp/images_P/white/white_00025.jpg);
+  margin: 0px 150px 50px 150px;
+  
+}
+
+.travel2{
+  display: flex;
+  flex-wrap: wrap;
+  background-image:url(https://beiz.jp/images_P/white/white_00025.jpg);
+  margin: 50px 150px 50px 150px;
+}
+
+.travel3{
+  display: flex;
+  flex-wrap: wrap;
+  background-image:url(https://beiz.jp/images_P/white/white_00025.jpg);
+  margin: 50px 150px 50px 150px;
+}
+
+.enjoy{
+  background: linear-gradient(90deg, rgba(190, 217, 240, 0.342), rgba(99, 129, 188, 0.534)) ;
+
+}
+
+.あ{
+    background-color: #84a2d4;
+    max-width: 100%;
+}
+
+
+.first-view {
+  position: relative;
+  height: 700px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.msg {
+  background: #FFEB00;
+  font-family: "Nico Moji";
+  font-size: 40px;
+  position: absolute;
+  top: 15%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  padding: 0.5em;
+  color: #fff;
+ 
+}
+.msg-01,
+.msg-02,
+.msg-03 {
+  text-shadow: 2px 2px 3px #000, -1px -1px 3px #000;
+}
+/*  スライドショーのコード　*/
+.img-01,
+.img-02,
+.img-03 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.img-01 {
+  background-image: url("https://www.global.jcb/en/about-us/images/index/pic_about-us_01.jpg");
+  animation: slide-animation-01 25s infinite;
+}
+.img-02 {
+  background-image: url("https://i.pinimg.com/originals/7f/87/bf/7f87bf21524594554ae7a111b5fef031.jpg");
+  animation: slide-animation-02 25s infinite;
+}
+.img-03 {
+  background-image: url("https://i.pinimg.com/originals/ce/29/2c/ce292cc4e0092e19a0891bde0dbf0623.jpg");
+  animation: slide-animation-03 25s infinite;
+}
+
+
+@keyframes slide-animation-01 {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  30% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+    transform: scale(1.15);
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes slide-animation-02 {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slide-animation-03 {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  70% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+}
+
+.first-view {
+  position: relative;
+  }
+
+.first-view p {
+  position: absolute;
+  top: 0;/*画像の左上に配置*/
+  left: 0;
+  margin: 0; /*余計な隙間を除く*/
+  color: #fff;/*文字を白に*/
+  font-size: 2.0em;
+  font-weight: bold;
+  line-height: 3;/*行高は1に*/
+  padding-top: 150px;
+  padding-left: 100px;
+  padding-right: 50px;
+  padding-bottom: 100px;
+  font-family: 'Note Serif JP', serif;  
+  white-space:normal;
+  writing-mode: vertical-rl;
+  margin-right: 0;
+ margin-left: auto;
+ width: 95%;
+ }
+ #container {
+  position: relative;
+  height: 350px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 370px;
+}
+
+.ripples div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: solid 2px #FFF;
+  border-radius: 50%;
+  opacity: 0;
+  animation: ripples_anim 4s linear infinite;
+}
+
+@keyframes ripples_anim {
+    0% {
+    opacity: 1;
+  }
+  
+  50% {   
+    transform: translate(-200px,-200px);
+    width: 400px;
+    height: 400px;
+    opacity: 0;
+  }
+}
+ .indent1{
+  text-indent: -2.5rem;
+  
+ }
+.first-view img {
+  width: 100%;
+  }
+
+.content_1{
+  padding: 150px;
+}
+.content_2{
+  padding: 70px;
+}
+.content_1{
+  background-color: #9ac5ff56;
+  position: relative;
+  background: linear-gradient(90deg, rgba(151, 202, 246, 0.621), rgba(190, 210, 249, 0.055)) ;
+}
+
+.content_2{
+  background: linear-gradient(90deg, rgba(190, 217, 240, 0.249), rgba(99, 129, 188, 0.534)) ;
+}
+
+.logo_test {                    /* ロゴ部分の指定 */
+  text-align:  center;        /* 文字を中央揃え */
+  padding: 10px;                /* 余白指定 */
+  color:  #000000c1;                /* 文字の色指定 */
+  width: 600px;                /* 幅指定 */
+  margin: 0 ,auto;            /* 中央寄せ */
+  font-size: 30px;           /* 文字サイズ指定 */
+ }
+.content_1::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+}
+
+.logo_test {
+  position: absolute;
+  top: 35%;
+  left: 25%;
+  color: rgba(165, 165, 165, 0.402);
+  text-shadow: 1px 1px 0 #66666666,2px 2px 0 #666,3px 3px 0 #666; 
+  opacity: 0;
+  animation-name: fadeout;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count:infinite
+}
+@keyframes fadeout {
+  0% {
+     opacity: 0;
+     transform: translateY(20px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateY(0);
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+.logo_test2{
+  font-family: 'Sacramento';
+  font-size: 50px;
+  text-align: left;
+}
+
+.content_3{
+  text-align: center; 
+}
+
+.logo_test2{
+  padding-left: 430px;
+}

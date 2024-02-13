@@ -1,0 +1,26 @@
+<div class="dog">
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<%= form_for @spot do |f| %>
+    <%= f.label :タイトル %>
+    <%= f.text_field :title, :size => 60 %> <br>
+    
+    <%= f.label :リンク %>
+    <%= f.text_field :link, :size => 60 %> <br>
+    
+    <%= f.label :住所 %>
+    <%= f.text_field :address, :size => 60 %> <br>
+
+    <%= f.label :内容 %>
+    <%= f.text_field :about, :size => 60 %> <br>
+
+    <%= f.label :写真 %>
+    <%= f.file_field :image %> <br>
+    <%= f.submit "編集する" %>
+ 
+    <% end %>
+</div> 

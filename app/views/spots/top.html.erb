@@ -1,0 +1,487 @@
+
+
+<%= form_for @spot do |f| %>
+ 
+    <%= f.submit "投稿する" %> 
+    <%= link_to "一覧に戻る", spots_path %>
+    <% if @category=="hotel" %>
+     <h3>ホテル</h3>                  
+       <%= form_for @spot do |f| %>
+          <h5>総合評価</h5>
+          <div class="post_form">
+          <%= f.radio_button :overall, 5 ,id: 'star1'%>
+          <label for="star1"><span class="text"></span>★</label>
+      
+          <%= f.radio_button :overall, 4 ,id: 'star2'%>
+          <label for="star2"><span class="text"></span>★</label>
+      
+          <%= f.radio_button :overall, 3 ,id: 'star3'%>
+          <label for="star3"><span class="text"></span>★</label>
+      
+          <%= f.radio_button :overall, 2 ,id: 'star4'%>
+          <label for="star4"><span class="text"></span>★</label>
+      
+          <%= f.radio_button :overall, 1 ,id: 'star5'%>
+          <label for="star5"><span class="text"></span>★</label>
+          </div>
+      
+          <h5>立地</h5>
+          <div class="post_form">
+            <%= f.radio_button :level,  5 ,id: 'star6'%>
+            <label for="star6"><span class="text"></span>★</label>
+        
+            <%= f.radio_button :level,  4 ,id: 'star7'%>
+            <label for="star7"><span class="text"></span>★</label>
+        
+            <%= f.radio_button :level, 3 ,id: 'star8'%>
+            <label for="star8"><span class="text"></span>★</label>
+        
+            <%= f.radio_button :level , 2 ,id: 'star9'%>
+            <label for="star9"><span class="text"></span>★</label>
+        
+            <%= f.radio_button :level , 1 ,id: 'star10'%>
+            <label for="star10"><span class="text"></span>★</label>
+          </div>
+        
+          <h5>清潔感</h5>
+          <div class="post_form">
+            <%= f.radio_button :q,  5 ,id: 'star11'%>
+            <label for="star11"><span class="text"></span>★</label>
+        
+            <%= f.radio_button :q,  4 ,id: 'star12'%>
+            <label for="star12"><span class="text"></span>★</label>
+        
+            <%= f.radio_button :q, 3 ,id: 'star13'%>
+            <label for="star13"><span class="text"></span>★</label>
+        
+            <%= f.radio_button :q , 2 ,id: 'star14'%>
+            <label for="star14"><span class="text"></span>★</label>
+        
+            <%= f.radio_button :q , 1 ,id: 'star15'%>
+            <label for="star15"><span class="text"></span>★</label>
+          </div>
+        
+          <h5>サービス</h5>
+          <div class="post_form">
+            <%= f.radio_button :w,  5 ,id: 'star16'%>
+            <label for="star16"><span class="text"></span>★</label>
+        
+            <%= f.radio_button :w,  4 ,id: 'star17'%>
+            <label for="star17"><span class="text"></span>★</label>
+        
+            <%= f.radio_button :w, 3 ,id: 'star18'%>
+            <label for="star18"><span class="text"></span>★</label>
+        
+            <%= f.radio_button :w , 2 ,id: 'star19'%>
+            <label for="star19"><span class="text"></span>★</label>
+        
+            <%= f.radio_button :w , 1 ,id: 'star20'%>
+            <label for="star20"><span class="text"></span>★</label>
+          </div>
+        
+          <h5>価格</h5>
+          <div class="post_form">
+            <%= f.radio_button :e,  5 ,id: 'star21'%>
+            <label for="star21"><span class="text"></span>★</label>
+        
+            <%= f.radio_button :e,  4 ,id: 'star22'%>
+            <label for="star22"><span class="text"></span>★</label>
+        
+            <%= f.radio_button :e, 3 ,id: 'star23'%>
+            <label for="star23"><span class="text"></span>★</label>
+        
+            <%= f.radio_button :e , 2 ,id: 'star24'%>
+            <label for="star24"><span class="text"></span>★</label>
+        
+            <%= f.radio_button :e , 1 ,id: 'star25'%>
+            <label for="star25"><span class="text"></span>★</label>
+          </div>
+          <%= f.hidden_field :Mana, :value =>”hotel” %>
+     
+          <%= f.submit "投稿する" %>
+       <% end %>
+                                        
+    <% elsif @category=="sightseeing" %>
+     <h3>観光新規投稿ページ</h3>                  
+     <%= form_for @spot do |f| %>
+          <h5>総合評価</h5>
+          <div class="post_form">
+          <%= f.radio_button :h, 5 ,id: 'star26'%>
+          <label for="star26"><span class="text"></span>★</label>
+    
+          <%= f.radio_button :h, 4 ,id: 'star27'%>
+          <label for="star27"><span class="text"></span>★</label>
+    
+          <%= f.radio_button :h, 3 ,id: 'star28'%>
+          <label for="star28"><span class="text"></span>★</label>
+    
+          <%= f.radio_button :h, 2 ,id: 'star29'%>
+          <label for="star29"><span class="text"></span>★</label>
+    
+          <%= f.radio_button :h, 1 ,id: 'star30'%>
+          <label for="star30"><span class="text"></span>★</label>
+          </div>
+    
+          <h5>景色</h5>
+          <div class="post_form">
+            <%= f.radio_button :r,  5 ,id: 'star31'%>
+            <label for="star31"><span class="text"></span>★</label>
+    
+            <%= f.radio_button :r,  4 ,id: 'star32'%>
+            <label for="star32"><span class="text"></span>★</label>
+    
+            <%= f.radio_button :r, 3 ,id: 'star33'%>
+            <label for="star33"><span class="text"></span>★</label>
+    
+            <%= f.radio_button :r, 2 ,id: 'star34'%>
+            <label for="star34"><span class="text"></span>★</label>
+    
+            <%= f.radio_button :r, 1 ,id: 'star35'%>
+            <label for="star35"><span class="text"></span>★</label>
+          </div>
+    
+          <h5>立地</h5>
+          <div class="post_form">
+            <%= f.radio_button :t,  5 ,id: 'star36'%>
+            <label for="star36"><span class="text"></span>★</label>
+    
+            <%= f.radio_button :t,  4 ,id: 'star37'%>
+            <label for="star37"><span class="text"></span>★</label>
+    
+            <%= f.radio_button :t, 3 ,id: 'star38'%>
+            <label for="star38"><span class="text"></span>★</label>
+    
+            <%= f.radio_button :t, 2 ,id: 'star39'%>
+            <label for="star39"><span class="text"></span>★</label>
+    
+            <%= f.radio_button :t, 1 ,id: 'star40'%>
+            <label for="star40"><span class="text"></span>★</label>
+          </div>
+    
+          <h5>価格</h5>
+          <div class="post_form">
+            <%= f.radio_button :y,  5 ,id: 'star41'%>
+            <label for="star41"><span class="text"></span>★</label>
+    
+            <%= f.radio_button :y,  4 ,id: 'star42'%>
+            <label for="star42"><span class="text"></span>★</label>
+    
+            <%= f.radio_button :y, 3 ,id: 'star43'%>
+            <label for="star43"><span class="text"></span>★</label>
+    
+            <%= f.radio_button :y, 2 ,id: 'star44'%>
+            <label for="star44"><span class="text"></span>★</label>
+    
+            <%= f.radio_button :y, 1 ,id: 'star45'%>
+            <label for="star45"><span class="text"></span>★</label>
+          </div>
+    
+          <h5>ファミリー向け</h5>
+          <div class="post_form">
+            <%= f.radio_button :u,  5 ,id: 'star46'%>
+            <label for="star46"><span class="text"></span>★</label>
+    
+            <%= f.radio_button :u,  4 ,id: 'star47'%>
+            <label for="star47"><span class="text"></span>★</label>
+    
+            <%= f.radio_button :u, 3 ,id: 'star48'%>
+            <label for="star48"><span class="text"></span>★</label>
+    
+            <%= f.radio_button :u, 2 ,id: 'star49'%>
+            <label for="star49"><span class="text"></span>★</label>
+    
+            <%= f.radio_button :u, 1 ,id: 'star50'%>
+            <label for="star50"><span class="text"></span>★</label>
+          </div>
+    
+          <h5>カップル向け</h5>
+          <div class="post_form">
+          <%= f.radio_button :i,  5 ,id: 'star51'%>
+          <label for="star51"><span class="text"></span>★</label>
+        
+          <%= f.radio_button :i,  4 ,id: 'star52'%>
+          <label for="star52"><span class="text"></span>★</label>
+        
+          <%= f.radio_button :i, 3 ,id: 'star53'%>
+          <label for="star53"><span class="text"></span>★</label>
+        
+          <%= f.radio_button :i, 2 ,id: 'star54'%>
+          <label for="star54"><span class="text"></span>★</label>
+        
+          <%= f.radio_button :i, 1 ,id: 'star55'%>
+          <label for="star55"><span class="text"></span>★</label>
+          </div>
+    
+          <h5>一人旅向け</h5>
+          <div class="post_form">
+          <%= f.radio_button :o,  5 ,id: 'star56'%>
+          <label for="star56"><span class="text"></span>★</label>
+        
+          <%= f.radio_button :o,  4 ,id: 'star57'%>
+          <label for="star57"><span class="text"></span>★</label>
+        
+          <%= f.radio_button :o, 3 ,id: 'star58'%>
+          <label for="star58"><span class="text"></span>★</label>
+        
+          <%= f.radio_button :o, 2 ,id: 'star59'%>
+          <label for="star59"><span class="text"></span>★</label>
+        
+          <%= f.radio_button :o, 1 ,id: 'star60'%>
+          <label for="star60"><span class="text"></span>★</label>
+          </div>
+    
+          <h5>穴場スポット</h5>
+          <div class="post_form">
+            <%= f.radio_button :p,  5 ,id: 'star61'%>
+            <label for="star61"><span class="text"></span>★</label>
+          
+            <%= f.radio_button :p,  4 ,id: 'star62'%>
+            <label for="star62"><span class="text"></span>★</label>
+          
+            <%= f.radio_button :p, 3 ,id: 'star63'%>
+            <label for="star63"><span class="text"></span>★</label>
+          
+            <%= f.radio_button :p, 2 ,id: 'star64'%>
+            <label for="star64"><span class="text"></span>★</label>
+          
+            <%= f.radio_button :p, 1 ,id: 'star65'%>
+            <label for="star65"><span class="text"></span>★</label>
+          </div>
+    
+          <h5>雨の日にもおすすめ</h5>
+          <div class="post_form">
+            <%= f.radio_button :a,  5 ,id: 'star66'%>
+            <label for="star66"><span class="text"></span>★</label>
+          
+            <%= f.radio_button :a,  4 ,id: 'star67'%>
+            <label for="star67"><span class="text"></span>★</label>
+          
+            <%= f.radio_button :a, 3 ,id: 'star68'%>
+            <label for="star68"><span class="text"></span>★</label>
+          
+            <%= f.radio_button :a, 2 ,id: 'star69'%>
+            <label for="star69"><span class="text"></span>★</label>
+          
+            <%= f.radio_button :a, 1 ,id: 'star70'%>
+            <label for="star70"><span class="text"></span>★</label>
+          </div>
+          <%= f.hidden_field :Mana, :value =>”sightseeing” %>
+     
+          <%= f.submit "投稿する" %>
+    
+     <% end %> 
+    
+    
+    <% elsif @category=="restaurant" %>  
+      <h3>レストラン新規投稿ページ</h3>             
+      <%= form_for @spot do |f| %>
+        <h5>総合評価</h5>
+        <div class="post_form">
+        <%= f.radio_button :j, 5 ,id: 'star71'%>
+        <label for="star71"><span class="text"></span>★</label>
+    
+        <%= f.radio_button :j, 4 ,id: 'star72'%>
+        <label for="star72"><span class="text"></span>★</label>
+    
+        <%= f.radio_button :j, 3 ,id: 'star73'%>
+        <label for="star73"><span class="text"></span>★</label>
+    
+        <%= f.radio_button :j, 2 ,id: 'star74'%>
+        <label for="star74"><span class="text"></span>★</label>
+    
+        <%= f.radio_button :j, 1 ,id: 'star75'%>
+        <label for="star75"><span class="text"></span>★</label>
+        </div>
+    
+    
+        <h5>食事</h5>
+        <div class="post_form">
+          <%= f.radio_button :s,  5 ,id: 'star76'%>
+          <label for="star76"><span class="text"></span>★</label>
+    
+          <%= f.radio_button :s,  4 ,id: 'star77'%>
+          <label for="star77"><span class="text"></span>★</label>
+    
+          <%= f.radio_button :s, 3 ,id: 'star78'%>
+          <label for="star78"><span class="text"></span>★</label>
+    
+          <%= f.radio_button :s, 2 ,id: 'star79'%>
+          <label for="star79"><span class="text"></span>★</label>
+    
+          <%= f.radio_button :s, 1 ,id: 'star80'%>
+          <label for="star80"><span class="text"></span>★</label>
+        </div>
+    
+        <h5>接客・サービス</h5>
+        <div class="post_form">
+          <%= f.radio_button :d,  5 ,id: 'star81'%>
+          <label for="star81"><span class="text"></span>★</label>
+    
+          <%= f.radio_button :d,  4 ,id: 'star82'%>
+          <label for="star82"><span class="text"></span>★</label>
+    
+          <%= f.radio_button :d, 3 ,id: 'star83'%>
+          <label for="star83"><span class="text"></span>★</label>
+    
+          <%= f.radio_button :d, 2 ,id: 'star84'%>
+          <label for="star84"><span class="text"></span>★</label>
+    
+          <%= f.radio_button :d, 1 ,id: 'star85'%>
+          <label for="star85"><span class="text"></span>★</label>
+        </div>
+    
+        <h5>価格</h5>
+        <div class="post_form">
+          <%= f.radio_button :f,  5 ,id: 'star86'%>
+          <label for="star86"><span class="text"></span>★</label>
+    
+          <%= f.radio_button :f,  4 ,id: 'star87'%>
+          <label for="star87"><span class="text"></span>★</label>
+    
+          <%= f.radio_button :f, 3 ,id: 'star88'%>
+          <label for="star88"><span class="text"></span>★</label>
+    
+          <%= f.radio_button :f, 2 ,id: 'star89'%>
+          <label for="star89"><span class="text"></span>★</label>
+    
+          <%= f.radio_button :f, 1 ,id: 'star90'%>
+          <label for="star90"><span class="text"></span>★</label>
+        </div>
+    
+        <h5>雰囲気</h5>
+        <div class="post_form">
+          <%= f.radio_button :g,  5 ,id: 'star91'%>
+          <label for="star91"><span class="text"></span>★</label>
+    
+          <%= f.radio_button :g,  4 ,id: 'star92'%>
+          <label for="star92"><span class="text"></span>★</label>
+    
+          <%= f.radio_button :g, 3 ,id: 'star93'%>
+          <label for="star93"><span class="text"></span>★</label>
+    
+          <%= f.radio_button :g, 2 ,id: 'star94'%>
+          <label for="star94"><span class="text"></span>★</label>
+    
+          <%= f.radio_button :g, 1 ,id: 'star95'%>
+          <label for="star95"><span class="text"></span>★</label>
+        </div>
+        <%= f.hidden_field :Mana, :value =>”restaurant” %>
+     
+        <%= f.submit "投稿する" %>
+      <% end %>                                        
+    <% end %>
+    
+      <div class="field">
+      <%= f.label :地域 %>
+        <div class='form-group'>
+        <%= f.collection_select :tag_ids, Tag.all, :id, :name, include_blank: "地域を選択してください"  %>
+        </div>
+      </div>
+      <div class="field">
+        <%= f.label :リンク %>
+        <%= f.text_field :link, :size => 30 %>
+      </div>
+      <div class="field">
+        <%= f.label :タイトル %>
+        <%= f.text_field :title, :size => 30 %>
+      </div>
+      <div class="field">
+        <%= f.label :住所 %>
+        <%= f.text_field :address, :size => 30 %>
+      </div>
+    
+      <div class="field">
+        <%= f.label :内容  %>
+        <%= f.text_area :about, :size => "30x2" %>
+      </div>
+    
+      <div class="field">
+        <%= f.label :写真 %>
+        <%= f.file_field :image %>
+      </div>
+      
+       
+      </div>
+      
+      
+    
+      <div class="actions">
+        <%= f.label :lat,"緯度" %>
+        <%= f.text_field :lat,:value =>"緯度", id: :lat %>
+        <%= f.label :lng,"経度" %>
+        <%= f.text_field :lng,:value =>"経度", id: :lng %>
+        
+      </div>
+    
+    
+    <h2>Map</h2>
+    
+    <input id="address" type="textbox" value="GeekSalon">
+    <input type="button" value="検索" onclick="codeAddress()">
+    <p>マーカーをドラック＆ドロップで位置の調整ができます。<p>
+    <div id='map'></div>
+    
+    <style>
+    #map {
+      height: 600px;
+      width: 600px;
+    }
+    </style>
+    
+    <script>
+    //初期マップの設定
+    let map
+    let marker
+    function initMap(){
+      geocoder = new google.maps.Geocoder()
+    
+      map = new google.maps.Map(document.getElementById('map'), {
+        center:  {lat: 35.6803997, lng:139.7690174},  //東京
+        zoom: 15,
+        
+      });
+    }
+    
+    //検索後のマップ作成
+    let geocoder
+    let aft
+    function codeAddress(){
+      let inputAddress = document.getElementById('address').value;
+      geocoder.geocode( { 'address': inputAddress}, function(results, status) {
+        if (status == 'OK') {
+            //マーカーが複数できないようにする
+            if (aft == true){
+                marker.setMap(null);
+            }
+    
+            //新しくマーカーを作成する
+            map.setCenter(results[0].geometry.location);
+                marker = new google.maps.Marker({
+                map: map,
+                position: results[0].geometry.location,
+                draggable: true	// ドラッグ可能にする
+            });
+    
+            //二度目以降か判断
+            aft = true
+    
+            //検索した時に緯度経度を入力する
+            document.getElementById('lat').value = results[0].geometry.location.lat();
+            document.getElementById('lng').value = results[0].geometry.location.lng();
+    
+            // マーカーのドロップ（ドラッグ終了）時のイベント
+            google.maps.event.addListener( marker, 'dragend', function(ev){
+                // イベントの引数evの、プロパティ.latLngが緯度経度
+                document.getElementById('lat').value = ev.latLng.lat();
+                document.getElementById('lng').value = ev.latLng.lng();
+            });
+        } else {
+          alert('該当する結果がありませんでした：' + status);
+        }
+      });   
+    }
+    
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyAyKFLgMNdAfXf_ogG3BCJmcmtO5xsyA&callback=initMap" async defer></script>
+    
+    <% end %>
